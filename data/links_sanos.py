@@ -2,11 +2,26 @@ import csv
 
 from gene_positions import gene
 
-with open('TablaParaCircosSanosEdge.csv') as f:
-    csvr = csv.DictReader(f)
+with open('TablaParaCircosSanosEdge.csv') as fi, \
+     open('links_sanos_same_chr.tsv', 'w') as fsame, \
+     open('links_sanos_diff_chr.tsv', 'w') as fdiff:
+    csvr     = csv.DictReader(fi)
+    same_chr = csv.writer(fsame, delimiter='\t')
+    diff_chr = csv.writer(fdiff, delimiter='\t')
+
     for row in csvr:
         (s,w,t)=row['name'].split()
         try:
-            print "hs%s" % gene.get(s)[2], gene.get(s)[0], gene.get(s)[1], "hs%s" % gene.get(t)[2], gene.get(t)[0], gene.get(t)[1]
+            source = gene[s]
+            target = gene[t]
         except:
-            pass
+            continue
+
+        if source[2] == target[2]:
+            same_chr.writerow(["hs%s" % source[2], source[0], source[1], "hs%s" % target[2], target[0], target[1]])
+        else:
+            diff_chr.writerow(["hs%s" % source[2], source[0], source[1], "hs%s" % target[2], target[0], target[1]])
+
+
+
+
