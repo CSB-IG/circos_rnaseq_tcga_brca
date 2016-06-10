@@ -19,8 +19,12 @@ with open('enfermos_nodes.csv') as f, \
         for row in csvr:
             try:
                 (start, end, chrom) = gene[row['shared name']]
-                lratio              = row['Exp Log Ratio']
-                degree              = row['Node Degree']
+                lratio = row['Exp Log Ratio']
+                if lratio == "":
+                    lratio = 0
+                degree = row['Node Degree']
+                if degree == "":
+                    degree = 0
             except:
                 continue            
 
