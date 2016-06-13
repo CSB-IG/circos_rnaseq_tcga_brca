@@ -15,6 +15,10 @@ diff chrom | 9801    | 266
 <td><img src="circos_sanos.png" width="100%">A. Healthy tissue</td>
 <td><img src="circos_enfermos.png" width="100%">B. Tumor tissue</td>
 </tr>
+<tr>
+<td><img src="circos_sanos_zoom.png" width="100%">C. Healthy tissue</td>
+<td><img src="circos_enfermos_zoom.png" width="100%">D. Tumor tissue</td>
+</tr>
 </table>
 
-Shown in red are the node degrees in the interaction network. The tumor plot also shows differential expression profiles in the outermost ring. 
+Shown in red in all plots are the node degrees in the interaction network. Tumor plots also show differential expression profiles in the outermost ring. 
