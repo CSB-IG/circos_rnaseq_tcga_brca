@@ -16,8 +16,8 @@ diff chrom | 9801    | 266
 <td><img src="circos_enfermos.png" width="100%">B. Tumor tissue</td>
 </tr>
 <tr>
-<td><img src="circos_sanos_zoom.png" width="100%">C. Healthy tissue</td>
-<td><img src="circos_enfermos_zoom.png" width="100%">D. Tumor tissue</td>
+<td><img src="circos_sanos_zoom.png" width="100%">C. Healthy tissue, zoomed into chrs 1 and 19</td>
+<td><img src="circos_enfermos_zoom.png" width="100%">D. Tumor tissue, zoomed into chrs 1 and 19</td>
 </tr>
 </table>
 
